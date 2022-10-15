@@ -3,7 +3,7 @@ July-07-2022
 
 Added support for Open-Zwave for Minoston MP22ZP zwave Smart Outdoor Plug
 
-1) Add the following to bottom of this file just above " </ManufacturerSpecificData> "
+1) Add the following to bottom of this file just above '</ManufacturerSpecificData>'
 
 ~/openwave/open-zwave/config/manufacturer_specific.xml
 
