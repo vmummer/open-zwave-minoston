@@ -15,3 +15,5 @@ Added support for Open-Zwave for Minoston MP22ZP zwave Smart Outdoor Plug
 
 
 2) Make director minoston and copy mp22zp.xml into it.
+
+Drop me an email if you found this use full.
