@@ -1,0 +1,126 @@
+<Product Revision="1" xmlns="https://github.com/OpenZWave/open-zwave">
+  <MetaData>
+    <MetaDataItem name="OzwInfoPage">http://www.openzwave.com/device-database/031E:0001:0002</MetaDataItem>
+    <MetaDataItem name="ProductPic">images/inovelli/lzw30-sn.png</MetaDataItem>
+    <MetaDataItem id="0001" name="ZWProductPage" type="0002">https://products.z-wavealliance.org/products/3451</MetaDataItem>
+    <MetaDataItem name="ProductPage">https://minoston.com/product/z-waveoutdoor-smart-plug-with-energy-monitoring-mp22wp-copy/</MetaDataItem>
+    <MetaDataItem name="ProductSupport">https://minoston.com/faq/</MetaDataItem>
+    <MetaDataItem name="ExclusionDescription">To Exclude your switch, put your HUB in exclusion mode and press the Manual/Program Button on the smart plug three (3) times quickly.</MetaDataItem>
+
+    <MetaDataItem id="0001" name="FrequencyName" type="0002">U.S. / Canada / Mexico</MetaDataItem>
+    <MetaDataItem name="ProductManual">https://minoston.com/wp-content/uploads/2022/05/MP22ZP-ZW96SP-manual-2021.12.30.pdf</MetaDataItem>
+    <MetaDataItem name="ResetDescription">You may factory reset the switch by clicking the Manual/Program Button twice quickly, then hold the Manual/Program Button for at least 10 seconds. 
+
+However, we recommend using a certified Z-Wave controller to remove the device from your network for factory resetting the smart plug .
+
+Only use either of these procedures in the event that the network primary controller is missing or otherwise inoperable.
+</MetaDataItem>
+    <MetaDataItem name="Description">The Minoston MP22ZP is an Outdoor smart plug designed for use for most residential lighting and motor applications. It’s compatible with LED, halogen, incandescent, xenon, fluorescent and compact fluorescent bulbs. MP22WP: outdoor plug comes equipped with energy monitoring capability. Monitor use and Save on bills. Enjoy a more efficient home.</MetaDataItem>
+    <MetaDataItem name="Name">MP22ZP Smart Plug</MetaDataItem>
+    <MetaDataItem id="0312" name="Identifier" type="ff0f">MP22ZP</MetaDataItem>
+    <MetaDataItem name="InclusionDescription">To include your switch, start the inclusion process on your HUB and tap the Manual/Program Button three (3) times quickly. The blue LED will blick quickly.
+
+</MetaDataItem>
+    <ChangeLog>
+      <Entry author="Vince Mammolit - vince@afterpoint.ca" date="17 Jul 2022" revision="1">Inital Draft</Entry>
+    </ChangeLog>
+  </MetaData>
+  <!-- Configuration Parameters -->
+  <CommandClass id="112">
+    <Value genre="config" type="list" size="1" index="1" label="LED Indicator" min="0" max="3" value="0">
+      <Help>
+	      LED Indicator - This parameter can access you to choose the LED indicator to be on when the plug (light) is on/off, or LED indicator remains on/off all times.
+      Range: 0-3
+      Default: 0 - LED is On when the switch(light) is On.
+	Value: 1 - LED is Off when switch(light) is On.
+	Value: 2 - LED is always Off.
+	Value: 3 - LED is always On.
+      </Help>
+      <Item value="0" label="On when On"/>
+      <Item value="1" label="Off when On"/>
+      <Item value="2" label="Always Off"/>
+      <Item value="3" label="Always On"/>
+    </Value>
+    <Value genre="config" type="short" size="4" index="2" label="Auto Turn-Off Timer" min="0" max="65535" value="0">
+      <Help>
+      This parameter can access you to set a timer to make the switch turn off automatically after the switch turned on. The numberentered as value corresponds to number of minutes.
+      Range: 0-65535 (minutes)
+      Default: 0
+      </Help>
+    </Value>
+    <Value genre="config" type="short" size="4" index="3" label="Auto Turn-On Timer" min="0" max="65535" value="0">
+      <Help>
+      This parameter can access you to set a timer to make the switch turn on automatically after the switch turned off. The numberentered as value corresponds to number of minutes.
+      Range: 0-65535
+      Default: 0
+      </Help>
+    </Value>
+    <Value genre="config" type="list" size="1" index="4" label="Restores state after power failure" min="0" max="2" value="0">
+      <Help>
+	This parameter can access you to set the switch to be on / off after power failure.
+        Range: 0-2
+	Default: 0 - Memory state before power failure.
+	  Value: 1 - Smart Plug is OFF regardless of the state prior to power failure.
+          Value: 2 - Smart Plug is ON regrdless of the state prior to power failure.
+      </Help>
+      <Item value="0" label="Memory Last State"/>
+      <Item value="1" label="OFF on power failure"/>
+      <Item value="2" label="ON on power failure"/>
+    </Value>
+    <Value genre="config" type="byte" size="2" index="5" label="Power Wattage(W) Report" min="0" max="50" value="5">
+      <Help>
+      This parameter determines the minimum change in power wattage (W) that will result in sending new power report to the main controller.
+      Range: 0 to 50W
+      Default: 5W
+      </Help>
+    </Value>
+    <Value genre="config" type="short" size="4" index="6" label="Time Report" min="1" max="65535" value="5">
+      <Help>
+      This parameter determines minimum time that has to elapse before sending new power report to the main controller.
+      Range: 1-65535 Minute
+      Default: 5
+      </Help>
+    </Value>
+    <Value genre="config" type="list" size="1" index="7" label="Current(A) Report" min="1" max="10" value="1">
+      <Help>
+      This parameter determines the minimum change in Current (A) that will result in sending new power report to the main controller.
+      Range: 0 - 10
+      Default: 0
+      </Help>
+      <Item value="1" label="0.1A"/>
+      <Item value="2" label="0.2A"/>
+      <Item value="3" label="0.3A"/>
+      <Item value="10" label="1A"/>
+    </Value>
+    <Value genre="config" type="list" size="1" index="8" label="Energy(kWh) Report" min="1" max="100" value="1">
+      <Help>
+     This parameter determines the minimum change in consumed energy that will result in sending new energy report to the main controller.
+      Range: 0-100 x 0.01 kWh
+      Default: 1 (0.01 kWh)
+      </Help>
+      <Item value="1" label="0.01 kWh"/>
+      <Item value="2" label="0.02 kWh"/>
+      <Item value="3" label="0.03 kWh"/>
+      <Item value="4" label="0.04 kWh"/>
+      <Item value="5" label="0.05 kWh"/>
+      <Item value="10" label="0.10 kWh"/>
+      <Item value="20" label="0.20 kWh"/>
+      <Item value="30" label="0.30 kWh"/>
+      <Item value="40" label="0.40 kWh"/>
+      <Item value="50" label="0.50 kWh"/>
+      <Item value="60" label="0.60 kWh"/>
+      <Item value="80" label="0.80 kWh"/>
+      <Item value="90" label="0.90 kWh"/>
+      <Item value="100" label="1 kWh"/>
+    </Value>
+  </CommandClass>
+
+  <!-- Association Groups -->
+  <CommandClass id="133">
+    <Associations num_groups="2">
+      <Group index="1" label="Lifeline" max_associations="5" />
+      <Group index="2" label="Basic_Set" max_associations="5" />
+    </Associations>
+  </CommandClass>
+</Product>
+
