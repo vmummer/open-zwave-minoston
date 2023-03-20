@@ -9,8 +9,8 @@ Added support for Open-Zwave for Minoston MP22ZP zwave Smart Outdoor Plug
 - This could be in the directory called Config 
 
 \<Manufacturer id="0312" name="Minoston"\> <br>
-  \<!-- Addded 22-07-20 by Vince Mammoliti vince@afterpoint.ca --\> <br>
-  \<Product config="minoston/mp22zp.xml" id="ff0f" name="MP22ZP Smart Outdoor Plug" type="ff00"/\> <br>
+ &nbsp;&nbsp; \<!-- Addded 22-07-20 by Vince Mammoliti vince@afterpoint.ca --\> <br>
+ &nbsp;&nbsp; \<Product config="minoston/mp22zp.xml" id="ff0f" name="MP22ZP Smart Outdoor Plug" type="ff00"/\> <br>
 \</Manufacturer\> <br>
 
 
