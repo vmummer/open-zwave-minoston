@@ -1,4 +1,5 @@
 # open-zwave-minoston
+<meta name="google-site-verification" content="VME-I6Lwa4Oeg5xOyA4gV2E3AYci2dhEpQb_Y-oNoiY" />
 July-07-2022
 
 Added support for Open-Zwave for Minoston MP22ZP zwave Smart Outdoor Plug
