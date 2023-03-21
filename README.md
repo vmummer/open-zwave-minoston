@@ -3,6 +3,8 @@ July-07-2022
 
 Added support for Open-Zwave for Minoston MP22ZP zwave Smart Outdoor Plug
 
+Currently using this in my Domoticz deployment. (/home/domoticz/Config)
+
 1) Add the following to bottom of this file just above '/ManufacturerSpecificData'
 
 ~/openwave/open-zwave/config/manufacturer_specific.xml
